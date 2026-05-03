@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Brasa | Adega & Tabacaria</title>
+    <meta
+      name="description"
+      content="Site moderno para adega e tabacaria com vitrine de produtos, carrinho rapido e pedido por WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true" data-cursor-glow></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Casa Brasa">
+        <span class="brand-mark">CB</span>
+        <span>Casa Brasa</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="#balcao">Balcao</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#pedido">Pedido</a>
+        <a class="cart-link" href="#carrinho">
+          Carrinho
+          <span id="cartCount">0</span>
+        </a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-label="Casa Brasa">
+        <picture>
+          <img src="assets/hero-adega.png" alt="Bebidas e itens de tabacaria em uma bancada sofisticada" />
+        </picture>
+        <div class="hero-overlay"></div>
+        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow">Adega. Tabacaria. Delivery.</p>
+          <h1>Acende a noite.</h1>
+          <p class="hero-copy">Bebidas, narguile, doses e copao. Escolheu, mandou, chegou.</p>
+          <div class="hero-actions">
+            <a class="btn primary magnetic" href="#produtos">Montar pedido</a>
+            <a class="btn secondary magnetic" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Destaques">
+          <div>
+            <strong>18+</strong>
+            <span>Venda responsavel</span>
+          </div>
+          <div>
+            <strong>22h</strong>
+            <span>Horario modelo</span>
+          </div>
+          <div>
+            <strong>Pix</strong>
+            <span>Pedido rapido</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section intro" id="balcao">
+        <div class="reveal">
+          <p class="eyebrow">Balcao direto</p>
+          <h2>Pouco texto. Muita venda.</h2>
+        </div>
+        <p class="reveal">
+          Um layout de impacto para loja de bairro: vitrine curta, compra facil e chamada forte para WhatsApp.
+        </p>
+      </section>
+
+      <section class="feature-grid" aria-label="Categorias">
+        <article class="reveal tilt-card">
+          <span>01</span>
+          <h3>Narguile</h3>
+          <p>Essencia, carvao e acessorios.</p>
+        </article>
+        <article class="reveal tilt-card">
+          <span>02</span>
+          <h3>Bebidas</h3>
+          <p>Geladas, doses e combos.</p>
+        </article>
+        <article class="reveal tilt-card">
+          <span>03</span>
+          <h3>Copao</h3>
+          <p>Pedido rapido para a noite.</p>
+        </article>
+      </section>
+
+      <section class="section catalog" id="produtos">
+        <div class="section-heading-with-copy reveal">
+          <div>
+            <p class="eyebrow">Vitrine</p>
+            <h2>Escolhe e joga no carrinho.</h2>
+          </div>
+          <p class="catalog-copy">Cards curtos, imagem grande e botao direto. Perfeito para adaptar com fotos reais.</p>
+        </div>
+
+        <div class="product-filters reveal" aria-label="Filtros de produtos">
+          <button class="filter-btn is-active" type="button" data-filter="all">Todos</button>
+          <button class="filter-btn" type="button" data-filter="narguile">Narguile</button>
+          <button class="filter-btn" type="button" data-filter="bebidas">Bebidas</button>
+          <button class="filter-btn" type="button" data-filter="doses">Doses</button>
+          <button class="filter-btn" type="button" data-filter="copao">Copao</button>
+        </div>
+
+        <div class="product-grid">
+          <article
+            class="product-card reveal tilt-card"
+            data-product-id="narguile"
+            data-product-filter="narguile"
+            data-product-price="89.9"
+            data-product-title="Narguile Completo"
+            data-product-category="Narguile"
+            data-product-description="Kit pronto para a sessao."
+          >
+            <span class="product-badge">Mais pedido</span>
+            <img src="assets/product-narguile.jpg" alt="Narguile Completo" class="product-image" />
+            <div>
+              <p>Narguile</p>
+              <h3>Narguile Completo</h3>
+              <span>R$ 89,90</span>
+              <button class="quick-add" type="button">Adicionar</button>
+            </div>
+          </article>
+
+          <article
+            class="product-card reveal tilt-card"
+            data-product-id="longneck"
+            data-product-filter="bebidas"
+            data-product-price="12.5"
+            data-product-title="Bebida Long Neck"
+            data-product-category="Bebidas"
+            data-product-description="Gelada e pronta para sair."
+          >
+            <span class="product-badge">Gelada</span>
+            <img src="assets/product-longneck.jpg" alt="Bebida Long Neck" class="product-image" />
+            <div>
+              <p>Bebidas</p>
+              <h3>Bebida Long Neck</h3>
+              <span>R$ 12,50</span>
+              <button class="quick-add" type="button">Adicionar</button>
+            </div>
+          </article>
+
+          <article
+            class="product-card reveal tilt-card"
+            data-product-id="dose"
+            data-product-filter="doses"
+            data-product-price="18"
+            data-product-title="Dose Promocional"
+            data-product-category="Doses"
+            data-product-description="Dose da casa para pedido rapido."
+          >
+            <span class="product-badge">Dose</span>
+            <img src="assets/product-dose.jpg" alt="Dose Promocional" class="product-image" />
+            <div>
+              <p>Doses</p>
+              <h3>Dose Promocional</h3>
+              <span>R$ 18,00</span>
+              <button class="quick-add" type="button">Adicionar</button>
+            </div>
+          </article>
+
+          <article
+            class="product-card reveal tilt-card"
+            data-product-id="copao"
+            data-product-filter="copao"
+            data-product-price="29.9"
+            data-product-title="Copao + Refri"
+            data-product-category="Copao"
+            data-product-description="Combo pratico para fechar a noite."
+          >
+            <span class="product-badge">Combo</span>
+            <img src="assets/product-copao.jpg" alt="Copao + Refri" class="product-image" />
+            <div>
+              <p>Copao</p>
+              <h3>Copao + Refri</h3>
+              <span>R$ 29,90</span>
+              <button class="quick-add" type="button">Adicionar</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cart-view hidden" id="carrinho">
+        <div class="cart-header reveal">
+          <button class="btn-back" id="backToProducts" type="button">Voltar</button>
+          <div>
+            <p class="eyebrow">Carrinho</p>
+            <h2>Fechar pedido.</h2>
+          </div>
+        </div>
+        <div class="cart-panel reveal">
+          <div class="cart-items" id="cartItems">Carrinho vazio.</div>
+          <div class="cart-summary">
+            <div>
+              <span>Subtotal</span>
+              <strong id="cartSubtotal">R$ 0,00</strong>
+            </div>
+            <div>
+              <span>Entrega</span>
+              <strong id="cartDelivery">R$ 8,00</strong>
+            </div>
+            <div class="cart-total">
+              <span>Total</span>
+              <strong id="cartTotal">R$ 0,00</strong>
+            </div>
+            <a class="btn primary cart-checkout disabled magnetic" id="cartCheckout" href="#">
+              Pagar com Stripe
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience" id="pedido">
+        <div class="experience-copy reveal">
+          <p class="eyebrow">Como pedir</p>
+          <h2>3 passos. Sem enrolar.</h2>
+        </div>
+        <div class="steps">
+          <div class="reveal tilt-card">
+            <span>1</span>
+            <p>Escolha</p>
+          </div>
+          <div class="reveal tilt-card">
+            <span>2</span>
+            <p>Adicione</p>
+          </div>
+          <div class="reveal tilt-card">
+            <span>3</span>
+            <p>Envie</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta reveal" id="contato">
+        <div>
+          <p class="eyebrow">Contato</p>
+          <h2>Troca o nome e ja apresenta.</h2>
+          <p>Telefone, endereco e horario entram aqui.</p>
+        </div>
+        <div class="contact-box">
+          <a class="btn primary magnetic" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">Chamar agora</a>
+          <p>Rua Exemplo, 123<br />Seg a sab, 10h as 22h</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="product-modal hidden" id="productModal" aria-hidden="true">
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Fechar">x</button>
+        <div class="modal-body">
+          <div class="modal-images">
+            <img id="modalImage" src="" alt="Produto" />
+          </div>
+          <div class="modal-info">
+            <p id="modalCategory" class="modal-category"></p>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription" class="modal-description"></p>
+            <div class="modal-price-action">
+              <strong id="modalPrice">R$ 0,00</strong>
+              <button class="btn primary add-to-cart-modal magnetic" id="modalAddBtn" type="button">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Item no carrinho</div>
+
+    <footer class="site-footer">
+      <p>Casa Brasa</p>
+      <p>Venda proibida para menores de 18 anos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

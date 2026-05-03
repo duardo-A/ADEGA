@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AGRITECH</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div class="hero__shade"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Ao lado de quem produz</p>
+          <h1>AGRITECH</h1>
+          <p class="hero__copy">Cotações, arroba, previsão do tempo e calendário de cultivo em uma central para tomada de decisão no campo.</p>
+          <div class="hero__actions">
+            <a href="#mercado" class="button button--primary">Ver mercado</a>
+            <a href="#calendario" class="button button--ghost">Calendário</a>
+          </div>
+        </div>
+        <div class="hero__stats" aria-label="Resumo do painel">
+          <div>
+            <span>Soja</span>
+            <strong id="heroSoy">R$ 142,80</strong>
+          </div>
+          <div>
+            <span>Boi gordo</span>
+            <strong id="heroCattle">R$ 318,00/@</strong>
+          </div>
+          <div>
+            <span>Praças</span>
+            <strong>10 regiões</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Filtros do painel">
+        <label>
+          Região
+          <select id="regionSelect"></select>
+        </label>
+        <label>
+          Praça climática
+          <select id="locationSelect"></select>
+        </label>
+        <label>
+          Cultura
+          <select id="cropSelect"></select>
+        </label>
+      </section>
+
+      <section class="dashboard">
+        <section class="panel panel--showcase">
+          <div class="panel__head">
+            <div>
+              <p class="section-kicker">Conteudo do campo</p>
+              <h2>Ideias rapidas para o produtor</h2>
+            </div>
+            <span class="stamp">AGRITECH</span>
+          </div>
+          <div class="showcase-grid">
+            <article class="showcase-feature">
+              <img src="assets/agri-machines-banner.png" alt="Banner com trator agricola moderno" />
+              <div>
+                <span>Maquinas agricolas</span>
+                <strong>O melhor para sua producao esta aqui.</strong>
+                <p>Use dados de clima, mercado e calendario para decidir a hora certa de plantar, colher e revisar a frota.</p>
+              </div>
+            </article>
+            <article class="showcase-card">
+              <img src="assets/corn-day-story.png" alt="Story sobre o dia do milho" />
+              <div>
+                <span>Voce sabia?</span>
+                <strong>O milho tem seu proprio dia.</strong>
+                <p>O dia 24 de maio lembra uma das culturas mais importantes para graos, racao, silagem e energia no Brasil.</p>
+              </div>
+            </article>
+            <article class="showcase-card">
+              <img src="assets/milk-post.png" alt="Arte sobre leite brasileiro" />
+              <div>
+                <span>Pecuaria leiteira</span>
+                <strong>Leite forte vem de manejo forte.</strong>
+                <p>Sanidade, conforto, agua limpa e mineralizacao ajudam a transformar rotina em produtividade.</p>
+              </div>
+            </article>
+            <article class="showcase-card">
+              <img src="assets/machine-maintenance-post.png" alt="Post sobre revisao de maquinas" />
+              <div>
+                <span>Antes da safra</span>
+                <strong>Nao espere para revisar suas maquinas.</strong>
+                <p>Revisao preventiva evita parada cara bem na janela de plantio ou colheita.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel panel--market" id="mercado">
+          <div class="panel__head">
+            <div>
+              <p class="section-kicker">Mercado</p>
+              <h2>Preço dos grãos</h2>
+            </div>
+            <span class="stamp">Referência simulada</span>
+          </div>
+          <div class="market-grid" id="marketGrid"></div>
+        </section>
+
+        <section class="panel panel--weather">
+          <div class="panel__head">
+            <div>
+              <p class="section-kicker">Tempo</p>
+              <h2>Previsão por região</h2>
+            </div>
+            <span class="stamp" id="weatherStatus">Carregando</span>
+          </div>
+          <div class="weather-now">
+            <div class="weather-icon" id="weatherIcon">☀</div>
+            <div>
+              <p id="weatherPlace">Sorriso, MT</p>
+              <strong id="weatherTemp">--°C</strong>
+              <span id="weatherDesc">Aguardando previsão</span>
+            </div>
+          </div>
+          <div class="weather-strip" id="weatherStrip"></div>
+        </section>
+
+        <section class="panel panel--cattle">
+          <div class="panel__head">
+            <div>
+              <p class="section-kicker">Pecuária</p>
+              <h2>Arroba por raça</h2>
+            </div>
+            <span class="stamp">R$/@</span>
+          </div>
+          <div class="cattle-layout">
+            <div class="cattle-list" id="cattleList"></div>
+            <div class="cattle-chart">
+              <div class="chart-head">
+                <div>
+                  <p class="section-kicker">Venda do gado</p>
+                  <h3 id="chartTitle">Melhor janela anual</h3>
+                </div>
+                <span class="stamp" id="chartBestMonth">--</span>
+              </div>
+              <div class="chart-stage" id="cattleChart"></div>
+              <div class="chart-note" id="chartNote"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel--calendar" id="calendario">
+          <div class="panel__head">
+            <div>
+              <p class="section-kicker">Plantio e colheita</p>
+              <h2>Calendário de cultivo</h2>
+            </div>
+            <div class="legend">
+              <span><i class="plant"></i>Plantio</span>
+              <span><i class="harvest"></i>Colheita</span>
+            </div>
+          </div>
+          <div class="calendar-wrap">
+            <div class="month-row" id="monthRow"></div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </div>
+          <div class="crop-detail" id="cropDetail"></div>
+        </section>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

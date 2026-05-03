@@ -1,0 +1,16 @@
+{
+  "name": "casa-brasa-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "stripe": "^18.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^48.0.0"
+  }
+}
